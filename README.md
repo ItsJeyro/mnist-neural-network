@@ -68,3 +68,43 @@ Future experiments may include network architecture improvements, model quantiza
 I'm documenting my progress as I learn to build AI systems from the ground up.
 
 **This repository is a learning journey, not a finished production model.**
+
+## Installation
+
+### Requirements
+
+- Python
+- A compatible NVIDIA GPU and CUDA environment for GPU acceleration with CuPy
+- Git
+
+### Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jeromeguilm-create/mnist-neural-network.git
+cd mnist-neural-network
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Running the project
+
+Training and evaluation instructions will depend on the scripts and model configuration in this repository.
