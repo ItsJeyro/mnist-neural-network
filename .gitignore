@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environnement virtuel
+.venv/
+venv/
+
+# Données et modèles générés
+data/
+datasets/
+*.npz
+*.npy
+*.pth
+*.pt
+*.ckpt
+
+# Configuration locale
+.env
+
+.vscode/
+cuda-ai.code-workspace
