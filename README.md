@@ -112,5 +112,17 @@ pip install -r requirements.txt
 ```
 
 ### Running the project
+Running the training script
+```bash
+python training.py
+```
 
-Training and evaluation instructions will depend on the scripts and model configuration in this repository.
+Running the test script
+```bash
+python test.py
+```
+
+Running the visualisation script (Vibe coded because I couldn't be bothered to do it)
+```bash
+python visualisation.py
+```
