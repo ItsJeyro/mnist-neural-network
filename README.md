@@ -91,6 +91,11 @@ Create a virtual environment:
 ```bash
 python -m venv .venv
 ```
+Bypass PowerShell security:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
 
 Activate it on Windows:
 
