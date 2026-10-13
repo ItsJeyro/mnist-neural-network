@@ -169,7 +169,7 @@ if __name__ == "__main__":
     b3=layer3.biases
     )
 
-    print("Saving network weights as model.npz !")
+    print("Saving network weights as model.npz")
 
 
     fig, ax1 = plt.subplots(figsize=(20, 12))
