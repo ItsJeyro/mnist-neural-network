@@ -82,7 +82,7 @@ I'm documenting my progress as I learn to build AI systems from the ground up.
 Clone the repository:
 
 ```bash
-git clone https://github.com/jeromeguilm-create/mnist-neural-network.git
+git clone https://github.com/itsjeyro/mnist-neural-network.git
 cd mnist-neural-network
 ```
 
