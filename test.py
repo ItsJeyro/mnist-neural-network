@@ -26,7 +26,7 @@ layer2.biases = params["b2"]
 layer3.weights  = params["w3"]
 layer3.biases = params["b3"]
 
-print("En train de tester (...)")
+print("Testing (...)")
 layer1.forward(inputs)
 activation1.forward(layer1.output)
 
@@ -37,11 +37,11 @@ layer3.forward(activation2.output)
 activation3.forward(layer3.output)
 
 
-print("Calcul des pertes (...)")
+print("Calculating losses (...)")
 loss = loss_function.calculate(activation3.output, y_true)
 predictions = cp.argmax(activation3.output, axis=1)
 accuracy = cp.mean(predictions == y_test)
 
-print("Fin du test")
-print(f"precision: {float(accuracy) * 100:.2f} %")
-print("Pertes: ", loss)
+print("Test finished")
+print(f"Test accuracy: {float(accuracy) * 100:.2f} %")
+print("Test loss: ", loss)

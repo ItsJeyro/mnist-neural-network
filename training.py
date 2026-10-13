@@ -156,7 +156,7 @@ if __name__ == "__main__":
         accuracy = calculate_accuracy(X_val, y_val)
         validation_accuracies.append(accuracy * 100)
         print("Generation: ", epochs)
-        print("Pertes ", loss)
+        print("Loss ", loss)
         print(f"Accuracy : {accuracy * 100:.2f}%")
 
     cp.savez(
@@ -169,13 +169,13 @@ if __name__ == "__main__":
     b3=layer3.biases
     )
 
-    print("Poids du réseau sauvegardés !")
+    print("Saving network weights as model.npz !")
 
 
     fig, ax1 = plt.subplots(figsize=(20, 12))
-    ax1.plot(loss_history, color="royalblue", alpha=0.7, label="Pertes entraînement")
-    ax1.set_xlabel("Numéro du groupe")
-    ax1.set_ylabel("Pertes", color="royalblue")
+    ax1.plot(loss_history, color="royalblue", alpha=0.7, label="Training loss")
+    ax1.set_xlabel("Batch number")
+    ax1.set_ylabel("Loss", color="royalblue")
     ax1.tick_params(axis="y", labelcolor="royalblue")
     ax1.grid(True, alpha=0.3)
     ax2 = ax1.twinx()
@@ -190,7 +190,7 @@ if __name__ == "__main__":
     )
     ax2.set_ylabel("Accuracy (%)", color="darkorange")
     ax2.tick_params(axis="y", labelcolor="darkorange")
-    fig.suptitle("Apprentissage du réseau MNIST")
+    fig.suptitle("MNIST neural network")
     lines1, labels1 = ax1.get_legend_handles_labels()
     lines2, labels2 = ax2.get_legend_handles_labels()
     ax1.legend(lines1 + lines2, labels1 + labels2, loc="center right")
