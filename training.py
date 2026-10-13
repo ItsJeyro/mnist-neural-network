@@ -122,12 +122,12 @@ layer3 = Layer_dense(286, 10)
 loss_function = Loss()
 softmax_Loss = Softmax_Loss()
 
-optimizer = Optimizer_SGD(learning_rate=0.0035, momentum=0.92)
+optimizer = Optimizer_SGD(learning_rate=0.0015, momentum=0.92)
 
 if __name__ == "__main__":
     loss_history = []
     validation_accuracies = []
-    for epochs in range(10):
+    for epochs in range(50):
         for batch_index, (inputs, y_true) in enumerate(batches):
             layer1.forward(inputs)
             activation1.forward(layer1.output)
