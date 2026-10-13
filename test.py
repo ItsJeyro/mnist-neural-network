@@ -13,7 +13,7 @@ optimizer = Optimizer_SGD()
 
 loss_function = Loss()
 
-params = cp.load("model1-3.npz")
+params = cp.load("model.npz")
 
 inputs, y_true = (X_test, y_test)
 

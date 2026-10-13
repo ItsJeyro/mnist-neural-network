@@ -160,7 +160,7 @@ if __name__ == "__main__":
         print(f"Accuracy : {accuracy * 100:.2f}%")
 
     cp.savez(
-    "model1-4.npz",
+    "model.npz",
     w1=layer1.weights,
     b1=layer1.biases,
     w2=layer2.weights,
@@ -173,19 +173,13 @@ if __name__ == "__main__":
 
 
     fig, ax1 = plt.subplots(figsize=(20, 12))
-
-    # Courbe de loss : axe de gauche
     ax1.plot(loss_history, color="royalblue", alpha=0.7, label="Pertes entraînement")
     ax1.set_xlabel("Numéro du groupe")
     ax1.set_ylabel("Pertes", color="royalblue")
     ax1.tick_params(axis="y", labelcolor="royalblue")
     ax1.grid(True, alpha=0.3)
-
-    # Courbe d'accuracy : axe de droite
     ax2 = ax1.twinx()
-
     epochs_x = range(1, len(validation_accuracies) + 1)
-
     ax2.plot(
         [((e - 1) * len(batches)) for e in epochs_x],
         validation_accuracies,
@@ -194,16 +188,12 @@ if __name__ == "__main__":
         linewidth=2,
         label="Accuracy"
     )
-
     ax2.set_ylabel("Accuracy (%)", color="darkorange")
     ax2.tick_params(axis="y", labelcolor="darkorange")
-
-    # Titre et légende
     fig.suptitle("Apprentissage du réseau MNIST")
     lines1, labels1 = ax1.get_legend_handles_labels()
     lines2, labels2 = ax2.get_legend_handles_labels()
     ax1.legend(lines1 + lines2, labels1 + labels2, loc="center right")
-
     fig.tight_layout()
     plt.show()
 
